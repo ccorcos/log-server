@@ -17,7 +17,9 @@ app.use(function(req, res, next) {
 
 app.post("*", (req, res) => {
 	console.log(req.body)
-	res.status(200).send()
+	setTimeout(() => {
+		res.status(200).send()
+	}, 0)
 })
 
 app.listen(8000, () => {
